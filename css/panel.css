@@ -1,67 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
 
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
 }
-:root{
-    
-  --primary-color : #6a2c70;
-  --nav-color: #6a2c70;
-  --dash-color: #fff;
-  --logo-color: #fff;
-  --text-color: #000;
-  --text-color-light: #333;
-  --white: #ffffff;
-  --border-color: #ccc;
-  --toggle-color: #fff;
-  --box1-color: #6fedd6;
-  --box2-color: #c1d5a4;
-  --box3-color: #ffd39a;
-  --title-icon-color: #fff;
 
-  --time-03: all 0.3s linear;
-  --time-02: all 0.2s linear;
+:root {
+
+    --primary-color: #8780f0;
+    --nav-color: #7a97f5;
+    --dash-color: #fff;
+    --logo-color: #fff;
+    --text-color: #000;
+    --text-color-light: #333;
+    --white: #ffffff;
+    --border-color: #ccc;
+    --toggle-color: #fff;
+    --box1-color: #dceeff;
+    --box2-color: #b19bee;
+    --box3-color: #f38dbd;
+    --title-icon-color: #fff;
+
+    --time-03: all 0.3s linear;
+    --time-02: all 0.2s linear;
 }
-body{
+
+body {
     width: 100%;
     min-width: 100vh;
     background-color: var(--dash-color);
     font-family: "Poppins", sans-serif;
     /* overflow-x: hidden; */
 }
-body.dark{
-  --primary-color : #3a3b3c;
-  --nav-color: #181819;
-  --dash-color: #262629;
-  --logo-color: #ddd;
-  --text-color: #ccc;
-  --text-color-light: #ccc;
-  --white: #aaa;
-  --border-color: #404040;
-  --toggle-color: #ddd;
-  --box1-color: #3a3b3c;
-  --box2-color: #3a3b3c;
-  --box3-color: #3a3b3c;
-  --title-icon-color: #ddd;
+
+body.dark {
+    --primary-color: #3a3b3c;
+    --nav-color: #181819;
+    --dash-color: #262629;
+    --logo-color: #ddd;
+    --text-color: #ccc;
+    --text-color-light: #ccc;
+    --white: #aaa;
+    --border-color: #404040;
+    --toggle-color: #ddd;
+    --box1-color: #3a3b3c;
+    --box2-color: #3a3b3c;
+    --box3-color: #3a3b3c;
+    --title-icon-color: #ddd;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background-color: #ccc;
     border-radius: 100px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: var(--primary-color);
     border-radius: 100px;
 }
-nav{
+
+nav {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     height: 100%;
     width: 250px;
@@ -69,41 +77,48 @@ nav{
     padding: 10px 0 10px 0 10px;
     transition: var(--time-02);
 }
-nav.close{
+
+nav.close {
     width: 72px;
 
 }
-nav .logo{
+
+nav .logo {
     display: flex;
     align-items: center;
-    
+
 }
+
 nav .logo .logo-image {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-   
-    
+
+
 }
+
 nav .logo .logo-image img {
     width: 45px;
     height: 45px;
     object-fit: cover;
-    
+
 }
-nav .logo .logo-name{
+
+nav .logo .logo-name {
     font-size: 22px;
     font-weight: 600;
     color: var(--logo-color);
     margin-left: 14px;
     white-space: nowrap;
 }
-nav.close .logo .logo-name{
+
+nav.close .logo .logo-name {
     opacity: 0;
 
-   
-}    
-nav .menu-items{
+
+}
+
+nav .menu-items {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -111,64 +126,76 @@ nav .menu-items{
     justify-content: space-between;
 
 }
-nav .menu-items li{
+
+nav .menu-items li {
     list-style: none;
 }
-nav .menu-items li a{
+
+nav .menu-items li a {
     display: flex;
-    align-items: center ;
+    align-items: center;
     height: 50px;
     text-decoration: none;
 
 }
-nav .menu-items li.active a{
+
+nav .menu-items li.active a {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     position: relative;
-} 
+}
 
-nav .menu-items li a ion-icon{
+nav .menu-items li a ion-icon {
     color: var(--white);
     font-size: 24px;
     min-width: 45px;
 }
-nav .menu-items li a .links{
+
+nav .menu-items li a .links {
     font-size: 18px;
     color: var(--white);
 }
-nav.close .menu-items li a .links{
+
+nav.close .menu-items li a .links {
     opacity: 0;
-}    
-nav .menu-items li.active a{
+}
+
+nav .menu-items li.active a {
     background-color: var(--dash-color);
 
 }
-nav .menu-items li.active a:after{
-    content:'';
+
+nav .menu-items li.active a:after {
+    content: '';
     position: absolute;
     width: 40px;
     height: 40px;
     right: 0%;
-    bottom:-40px;
+    bottom: -40px;
     border-radius: 50%;
-    box-shadow: 20px -20px var(--dash-color);   
+    box-shadow: 20px -20px var(--dash-color);
 
 
-}   
-nav .menu-items li.active a .links{
+}
+
+nav .menu-items li.active a .links {
     color: var(--primary-color);
 }
+
 body.dark nav .menu-items li.active a .links,
-body.dark nav .menu-items li.active a .ion-icons{
+body.dark nav .menu-items li.active a .ion-icons {
     color: var(--text-color);
 }
-nav .menu-items li.active a ion-icon{
+
+nav .menu-items li.active a ion-icon {
     color: var(--primary-color);
 }
-nav .menu-items .mode{
+
+nav .menu-items .mode {
     display: flex;
 }
-.menu-items .darkToggle{
+
+.menu-items .darkToggle {
     position: absolute;
     right: 15px;
     width: 45px;
@@ -177,7 +204,8 @@ nav .menu-items .mode{
     justify-content: center;
     align-items: center;
 }
-.darkToggle .switch{
+
+.darkToggle .switch {
     position: relative;
     display: inline-block;
     height: 22px;
@@ -185,8 +213,9 @@ nav .menu-items .mode{
     border-radius: 25px;
     background-color: var(--toggle-color);
 }
-.darkToggle .switch:before{
-    content:'';
+
+.darkToggle .switch:before {
+    content: '';
     position: absolute;
     left: 5px;
     top: 50%;
@@ -197,52 +226,58 @@ nav .menu-items .mode{
     background-color: var(--nav-color);
     transition: var(--time-02);
 }
-body.dark .switch::before{
+
+body.dark .switch::before {
     left: 20px;
 }
 
-.dashboard{
-    position:relative;  
+.dashboard {
+    position: relative;
     left: 250px;
     width: calc(100% - 250px);
     min-height: 100vh;
     background-color: var(--dash-color);
     padding: 10px 15px;
-    transition:var(--time-03) ;
+    transition: var(--time-03);
 }
-nav.close ~ .dashboard{
+
+nav.close~.dashboard {
     width: calc(100% - 72px);
     left: 72px;
-} 
-.dashboard .top{
+}
+
+.dashboard .top {
     position: fixed;
     background-color: var(--dash-color);
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     left: 250px;
-    top:0;
+    top: 0;
     padding: 10px 15px;
     width: calc(100% - 250px);
     transition: var(--time-03);
     z-index: 100
-
 }
-nav.close ~ .dashboard .top{
+
+nav.close~.dashboard .top {
     width: calc(100% - 72px);
     left: 72px;
-}   
-.dashboard .top .navToggle{
+}
+
+.dashboard .top .navToggle {
     font-size: 25px;
     color: var(--text-color);
     cursor: pointer;
 }
-.top img{
+
+.top img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
-.dashboard .top .searchbox{
+
+.dashboard .top .searchbox {
     position: relative;
     height: 45px;
     border: 1px solid var(--border-color);
@@ -252,17 +287,18 @@ nav.close ~ .dashboard .top{
     border-radius: 5px;
     padding: 0 10px;
     width: 80%px;
-    margin: 0 30px; 
-  
+    margin: 0 30px;
+
 }
-.dashboard .top .searchbox:focus-within{
+
+.dashboard .top .searchbox:focus-within {
     border-color: #0ff9;
     box-shadow: 0 0 3px #0ff9;
 }
 
 
 
-.top .searchbox input{
+.top .searchbox input {
     width: 100%;
     height: 100%;
     font-size: 15px;
@@ -270,22 +306,25 @@ nav.close ~ .dashboard .top{
     background-color: var(--dash-color);
     color: var(--text-color)
 }
-.top .searchbox input:focus{
+
+.top .searchbox input:focus {
     outline: none;
 }
-.top .searchbox ion-icon{
+
+.top .searchbox ion-icon {
     font-size: 22px;
     color: var(--text-color-light);
     padding-right: 0 15px;
-    
+
 }
 
-.container .title{
+.container .title {
     display: flex;
     align-items: center;
     margin: 60px 0 30px;
-}    
-.container .title ion-icon{
+}
+
+.container .title ion-icon {
     width: 35px;
     height: 35px;
     padding: 5px;
@@ -293,151 +332,181 @@ nav.close ~ .dashboard .top{
     color: var(--title-icon-color);
     border-radius: 6px;
 }
-.container .title .text{
+
+.container .title .text {
     font-size: 24px;
     font-weight: 500;
     color: var(--text-color);
     margin-left: 10px;
 }
-.container .boxes{
-    display:flex;
+
+.container .boxes {
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 
 }
 
-.container .boxes .box{
+.container .boxes .box {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     width: calc(100% / 3 - 15px);
     padding: 15px 20px;
     border-radius: 10px;
     background-color: var(--box1-color);
 }
-.boxes .box ion-icon{
+
+.boxes .box ion-icon {
     font-size: 35px;
     color: var(--text-color);
     margin: 5px;
 }
-.boxes .box .text{
+
+.boxes .box .text {
     font-size: 18px;
     font-weight: 500;
     color: var(--text-color);
 }
-.boxes .box .number{
+
+.boxes .box .number {
     font-size: 40px;
     font-weight: 500;
     color: var(--text-color);
 }
-.boxes .box.box2{
+
+.boxes .box.box2 {
     background-color: var(--box2-color);
 }
-.boxes .box.box3{
+
+.boxes .box.box3 {
     background-color: var(--box3-color);
 }
-.container .activity .activity-data{
+
+.container .activity .activity-data {
     display: flex;
     justify-content: space-between;
     width: 100%;
     overflow-x: auto;
 }
-.activity-data .data{
+
+.activity-data .data {
     display: flex;
     flex-direction: column;
     margin: 0 40px;
 
 }
-.activity-data .data-title{
+
+.activity-data .data-title {
     font-size: 18px;
     color: var(--text-color);
     font-weight: 500;
     white-space: nowrap;
 }
 
-.activity-data .data-list{
+.activity-data .data-list {
     font-size: 18px;
     color: var(--text-color);
     margin-top: 20px;
     white-space: nowrap;
 }
-@media (max-width:768px){
-    nav{
+
+@media (max-width:768px) {
+    nav {
         width: 72px;
     }
-    nav.close{
+
+    nav.close {
         width: 250px;
     }
-    nav .logo .logo-name{
+
+    nav .logo .logo-name {
         opacity: 0;
     }
-     nav.close .logo .logo-name{
+
+    nav.close .logo .logo-name {
         opacity: 1;
     }
-    .menu-items li a .links{
+
+    .menu-items li a .links {
         opacity: 1;
     }
-     nav.close .menu-items li a .links{
+
+    nav.close .menu-items li a .links {
         opacity: 1;
     }
-    .dashboard{
+
+    .dashboard {
         width: calc(100% - 72px);
         left: 72px;
     }
-    nav.close ~ .dashboard{
-        width: calc(100% - 250px);  
-        left: 250px;
-    }
-    .dashboard .top{
-        width: calc(100% - 72px);
-        left: 72px;
-    }    
-    nav.close ~ .dashboard .top{
+
+    nav.close~.dashboard {
         width: calc(100% - 250px);
         left: 250px;
     }
-    
-    .container .boxes .box{
-        width: cal(100% /2 - 15px);
-    }
-} 
-@media (max-width: 560px){
-    .container .boxes .box{
-        width: 100%;
-    }
-    .activity-data .data-list{
-        font-size: 16px;
-    }
-}
-@media (max-width:425px){
-    nav{
-        transform: translateX(-73px);
-    }
-    nav.close{
-        transform: translateX(0);
-        width: 73px;
-    }
-     nav.close .logo .logo-name{
-        opacity: 0;
-    }
-     nav.close .menu-items li a .links{
-        opacity: 0;
-    }
-       .dashboard{
-        width: 100%;
-        left: 0px;
-    }
-    nav.close ~ .dashboard{
-        width: calc(100% - 72px);  
-        left: 72px;
-    }
-    .dashboard .top{
-        width: 100%;
-        left: 0;
-    }    
-    nav.close ~ .dashboard .top{
+
+    .dashboard .top {
         width: calc(100% - 72px);
         left: 72px;
     }
-        
+
+    nav.close~.dashboard .top {
+        width: calc(100% - 250px);
+        left: 250px;
+    }
+
+    .container .boxes .box {
+        width: cal(100% /2 - 15px);
+    }
+}
+
+@media (max-width: 560px) {
+    .container .boxes .box {
+        width: 100%;
+    }
+
+    .activity-data .data-list {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:425px) {
+    nav {
+        transform: translateX(-73px);
+    }
+
+    nav.close {
+        transform: translateX(0);
+        width: 73px;
+    }
+
+    nav.close .logo .logo-name {
+        opacity: 0;
+    }
+
+    nav.close .menu-items li a .links {
+        opacity: 0;
+    }
+
+    .dashboard {
+        width: 100%;
+        left: 0px;
+    }
+
+    nav.close~.dashboard {
+        width: calc(100% - 72px);
+        left: 72px;
+    }
+
+    .dashboard .top {
+        width: 100%;
+        left: 0;
+    }
+
+    nav.close~.dashboard .top {
+        width: calc(100% - 72px);
+        left: 72px;
+    }
+
 }
